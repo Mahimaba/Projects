@@ -1,0 +1,145 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Lora", serif;
+    font-weight: lighter;
+}
+.container{
+    width: 100%;
+    height: 99.5vh;
+    
+}
+.mainbody{
+    width: 70%;
+    margin: auto;
+    height: 90vh;
+    
+    color: rgb(0,0,96);
+}
+
+
+
+
+
+
+/* navbar */
+.nav{
+    width: 100%;
+    height: 70px;
+    background-image: linear-gradient(to right, rgb(0,139,139), rgb(100,149,237),rgb(216,191,216), rgb(32,178,170),rgb(0,0,128));
+    color:  white;
+    font-size: 25px;
+    line-height: 70px;
+    border-radius: 10px;
+    list-style-type: none;
+}
+ul li{
+    padding-left: 20px;
+}
+
+
+
+/* mainbody */
+.mainbody{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+  
+}
+@media (max-width:500px){
+    .mainbody{
+        flex-wrap: wrap;
+    }
+    .game{
+        margin-top: 20px;
+      height: 10px;
+      max-width: 200px;
+    
+    }
+    .win{
+        font-size: 11px;
+    }
+    
+    
+}
+.game{
+   
+    padding-top: 5%;
+   
+}
+.win{
+   
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+}
+
+
+/* game board */
+.game{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    text-align: center;
+  
+
+}
+.grid-item{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    border: 3px solid black;
+  
+   
+}
+.grid-item:hover{
+    background-color:powderblue;
+    cursor: pointer;
+  
+}
+.x{
+  font-size: 40px;  
+}
+.gif img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+
+
+
+
+/* reset the game */
+#reset{
+    margin-left: 20px;
+    margin-top: 10px;
+    height: 40px;
+    width: 100px;
+    font-size: 18px;
+    background-color: rgb(102, 189, 160);
+    border: 2px solid black;
+}
+#reset:hover{
+    background-color: rgb(109, 211, 221);
+    color: aliceblue;
+}
+
+
+/* utility class */
+.bl-0{
+    border-left:0;
+}
+.br-0{
+    border-right:0;
+}
+.bt-0{
+    border-top:0;
+}
+.bb-0{
+    border-bottom:0;
+}
